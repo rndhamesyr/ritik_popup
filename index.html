@@ -81,7 +81,7 @@
       color: #333;
       margin-top: 20px;
     }
-    .background {
+    .floating-letters {
       position: absolute;
       top: 0;
       left: 0;
@@ -89,9 +89,13 @@
       height: 100%;
       overflow: hidden;
       z-index: 1;
+      pointer-events: none;
     }
-    .background img {
+    .floating-letters span {
       position: absolute;
+      font-size: 24px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.3);
       animation: float 10s infinite;
     }
     @keyframes float {
@@ -102,29 +106,19 @@
         transform: translateY(-20px);
       }
     }
-    .background .data-flow {
-      width: 200px;
-      left: 20%;
-      top: 30%;
-    }
-    .background .chart {
-      width: 150px;
-      right: 20%;
-      top: 40%;
-    }
-    .background .database {
-      width: 100px;
-      left: 50%;
-      bottom: 20%;
-    }
   </style>
 </head>
 <body>
 
-<div class="background">
-  <img src="https://img.icons8.com/color/480/data-flow.png" alt="Data Flow" class="data-flow">
-  <img src="https://img.icons8.com/color/480/combo-chart.png" alt="Chart" class="chart">
-  <img src="https://img.icons8.com/color/480/database.png" alt="Database" class="database">
+<div class="floating-letters">
+  <span style="left: 20%; top: 10%;">Ritik</span>
+  <span style="left: 40%; top: 20%;">Dhame</span>
+  <span style="left: 60%; top: 30%;">Ritik</span>
+  <span style="left: 80%; top: 40%;">Dhame</span>
+  <span style="left: 50%; top: 50%;">Ritik</span>
+  <span style="left: 30%; top: 60%;">Dhame</span>
+  <span style="left: 10%; top: 70%;">Ritik</span>
+  <span style="left: 70%; top: 80%;">Dhame</span>
 </div>
 
 <div class="container">
@@ -160,7 +154,7 @@ function closePage() {
   document.getElementById('message').style.display = 'block';
   setTimeout(() => {
     window.location.href = 'https://www.linkedin.com/in/ritikdhame/';
-  }, 15000);
+  }, 2000);
 }
 </script>
 
