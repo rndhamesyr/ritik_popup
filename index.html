@@ -34,6 +34,9 @@
     }
     .email-service {
       margin: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .email-service button {
       padding: 10px 20px;
@@ -44,6 +47,14 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .email-service button img {
+      width: 20px;
+      height: 20px;
     }
     .email-service button:hover {
       background-color: #005bb5;
@@ -87,15 +98,21 @@
 <div class="background"></div>
 
 <div class="container">
-  <h2>Select your email service</h2>
+  <h2>Where should I send you my resume?</h2>
   <div class="email-service">
-    <button onclick="openEmail('mailto:ritikdhame5@gmail.com?subject=Request%20for%20Resume&body=Hi%20Ritik,%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0ABest%20regards,%0A[Your%20Name]')">Gmail</button>
+    <button onclick="openEmail('mailto:ritikdhame5@gmail.com?subject=Request%20for%20Resume&body=Hi%20Ritik,%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0ABest%20regards,%0A[Your%20Name]')">
+      <img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Gmail"> Gmail
+    </button>
   </div>
   <div class="email-service">
-    <button onclick="openEmail('mailto:?to=&subject=Request%20for%20Resume&body=Hi%20Ritik,%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0ABest%20regards,%0A[Your%20Name]')">Other Email</button>
+    <button onclick="openEmail('mailto:?to=&subject=Request%20for%20Resume&body=Hi%20Ritik,%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0ABest%20regards,%0A[Your%20Name]')">
+      <img src="https://img.icons8.com/color/48/000000/ms-outlook.png" alt="Outlook"> Outlook
+    </button>
   </div>
   <div class="email-service">
-    <button onclick="openEmail('mailto:?to=&subject=Request%20for%20Resume&body=Hi%20Ritik,%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0ABest%20regards,%0A[Your%20Name]')">Outlook</button>
+    <button onclick="openEmail('mailto:?to=&subject=Request%20for%20Resume&body=Hi%20Ritik,%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0ABest%20regards,%0A[Your%20Name]')">
+      <img src="https://img.icons8.com/color/48/000000/email.png" alt="Other Email"> Other Email
+    </button>
   </div>
   <button class="cancel-button" onclick="closePage()">Cancel</button>
   <div class="message" id="message">Sorry to see you leave and not witness greatness!</div>
@@ -113,7 +130,7 @@ function closePage() {
   document.getElementById('message').style.display = 'block';
   setTimeout(() => {
     window.location.href = 'https://www.linkedin.com/in/ritikdhame/';
-  }, 3000);
+  }, 15000);
 }
 </script>
 
