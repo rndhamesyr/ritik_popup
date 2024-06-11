@@ -16,6 +16,7 @@
       justify-content: center;
       height: 100vh;
       overflow: hidden;
+      position: relative;
     }
     .container {
       background: #fff;
@@ -82,20 +83,49 @@
     }
     .background {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       z-index: 1;
-      width: 200%;
-      height: 200%;
-      background: rgba(255, 255, 255, 0.1);
-      clip-path: circle(50%);
+    }
+    .background img {
+      position: absolute;
+      animation: float 10s infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    .background .data-flow {
+      width: 200px;
+      left: 20%;
+      top: 30%;
+    }
+    .background .chart {
+      width: 150px;
+      right: 20%;
+      top: 40%;
+    }
+    .background .database {
+      width: 100px;
+      left: 50%;
+      bottom: 20%;
     }
   </style>
 </head>
 <body>
 
-<div class="background"></div>
+<div class="background">
+  <img src="https://img.icons8.com/color/480/data-flow.png" alt="Data Flow" class="data-flow">
+  <img src="https://img.icons8.com/color/480/combo-chart.png" alt="Chart" class="chart">
+  <img src="https://img.icons8.com/color/480/database.png" alt="Database" class="database">
+</div>
 
 <div class="container">
   <h2>Where should I send you my resume?</h2>
